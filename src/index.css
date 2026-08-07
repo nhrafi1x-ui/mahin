@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    background-color: #F9F7F2;
+    color: #1A1A1A;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+  }
+
+  h1, h2, h3, .font-serif {
+    font-family: 'Instrument Serif', Georgia, serif;
+  }
+
+  code, pre, .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+/* Editorial theme utilities */
+.editorial-paper {
+  background-color: #F9F7F2;
+}
+
+.editorial-card {
+  background-color: #FFFFFF;
+  border: 1px solid #1A1A1A;
+}
+
+.editorial-card-muted {
+  background-color: #E6E1D6;
+  border: 1px solid #1A1A1A;
+}
+
+.editorial-dark {
+  background-color: #1A1A1A;
+  color: #F9F7F2;
+}
+
+.editorial-rust {
+  background-color: #CC5500;
+  color: #FFFFFF;
+}
+
+.editorial-border {
+  border-color: #1A1A1A;
+}
+
+.editorial-border-light {
+  border-color: #E2DACD;
+}
