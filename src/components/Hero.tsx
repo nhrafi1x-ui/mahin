@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { Download, Mail, Sparkles, Award, GraduationCap, Clock, FileText, ExternalLink, ShieldAlert, CheckCircle2, ArrowRight } from 'lucide-react';
 import { PERSONAL_INFO } from '../data/portfolioData';
+import profilePic from '../assets/images/regenerated_image_1786112837941.png';
+import { MAHIN_PROFILE_IMAGE } from '../assets/profileImage';
 
 interface HeroProps {
   onOpenCvModal: () => void;
@@ -91,35 +93,36 @@ export const Hero: React.FC<HeroProps> = ({ onOpenCvModal, onExploreProjects, on
                 <div className="text-[10px] uppercase tracking-widest text-[#666] font-bold flex items-center gap-1 mb-1">
                   <Sparkles className="w-3.5 h-3.5 text-[#CC5500]" /> Undergraduate
                 </div>
-                <div className="text-xl font-serif font-bold text-[#1A1A1A]">Final Year (8th Sem)</div>
-                <div className="text-[11px] text-[#CC5500] font-bold uppercase tracking-wider mt-1">B.Sc. Software Engineering</div>
+                <div className="text-xl font-serif font-bold text-[#1A1A1A]">Final Year</div>
+                <div className="text-[11px] text-[#CC5500] font-bold uppercase tracking-wider mt-1">Daffodil International University</div>
               </div>
             </div>
 
-            {/* Action Buttons */}
-            <div className="flex flex-wrap items-center justify-center lg:justify-start gap-3 pt-4">
+            {/* Action Buttons - Perfectly Aligned & Spacious Block */}
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center lg:justify-start gap-4 pt-6">
               <button
                 onClick={onExploreProjects}
-                className="px-6 py-3 bg-[#1A1A1A] hover:bg-[#CC5500] text-[#F9F7F2] font-bold text-xs uppercase tracking-widest transition-all flex items-center gap-2 cursor-pointer border border-[#1A1A1A] group"
+                className="px-6 py-3.5 bg-[#1A1A1A] hover:bg-[#CC5500] text-[#F9F7F2] font-bold text-xs uppercase tracking-widest transition-all flex items-center justify-center gap-2 cursor-pointer border border-[#1A1A1A] group shadow-sm"
               >
-                <span>Explore Visual Case Studies</span>
+                <span>Explore Projects</span>
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </button>
 
-              <button
-                onClick={onOpenCvModal}
-                className="px-6 py-3 bg-white hover:bg-[#E6E1D6] text-[#1A1A1A] border border-[#1A1A1A] font-bold text-xs uppercase tracking-widest transition-all flex items-center gap-2 cursor-pointer shadow-sm"
+              <a
+                href="/Mahin_Alam_CV.pdf"
+                download="Mahin_Alam_CV.pdf"
+                className="px-6 py-3.5 bg-white hover:bg-[#E6E1D6] text-[#1A1A1A] border border-[#1A1A1A] font-bold text-xs uppercase tracking-widest transition-all flex items-center justify-center gap-2 cursor-pointer shadow-sm"
               >
                 <Download className="w-4 h-4 text-[#CC5500]" />
-                <span>Download Official CV</span>
-              </button>
+                <span>Download CV (PDF)</span>
+              </a>
 
               <button
                 onClick={onContactClick}
-                className="px-5 py-3 bg-[#E6E1D6] hover:bg-white text-[#1A1A1A] border border-[#1A1A1A] text-xs font-bold uppercase tracking-widest transition-all flex items-center gap-2 cursor-pointer"
+                className="px-6 py-3.5 bg-[#CC5500] hover:bg-[#A34400] text-white border border-[#1A1A1A] text-xs font-bold uppercase tracking-widest transition-all flex items-center justify-center gap-2 cursor-pointer shadow-sm"
               >
-                <Mail className="w-4 h-4 text-[#1A1A1A]" />
-                <span>Contact Email</span>
+                <Mail className="w-4 h-4" />
+                <span>Hire Mahin</span>
               </button>
             </div>
           </div>
@@ -130,26 +133,28 @@ export const Hero: React.FC<HeroProps> = ({ onOpenCvModal, onExploreProjects, on
               {/* Profile Card Box - Editorial Frame */}
               <div className="bg-white border-2 border-[#1A1A1A] p-5 shadow-lg space-y-4">
                 {/* Image Frame */}
-                <div className="relative aspect-[4/4.2] border border-[#1A1A1A] bg-[#E6E1D6] overflow-hidden group">
+                <div className="relative aspect-[4/4] border border-[#1A1A1A] bg-[#E6E1D6] overflow-hidden group shadow-sm">
                   {/* High Quality Portrait photo of Mahin Alam */}
                   <img
-                    src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80"
-                    alt="Mahin Alam - Software Engineering Student"
+                    src={profilePic || MAHIN_PROFILE_IMAGE}
+                    alt="Mahin Alam - Daffodil International University"
                     className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
                     referrerPolicy="no-referrer"
-                    onError={() => setImgLoaded(false)}
+                    onError={(e) => {
+                      (e.target as HTMLImageElement).src = MAHIN_PROFILE_IMAGE || "/mahin-hijab.jpg";
+                    }}
                   />
+                </div>
 
-                  {/* Editorial Photo Caption Badge */}
-                  <div className="absolute bottom-0 left-0 right-0 bg-[#1A1A1A]/90 text-[#F9F7F2] p-2.5 text-left border-t border-[#1A1A1A]">
-                    <span className="px-2 py-0.5 text-[9px] font-bold uppercase tracking-widest bg-[#CC5500] text-white inline-block mb-1">
-                      Software Engineering Candidate
-                    </span>
-                    <h3 className="text-base font-serif italic text-white leading-tight">{PERSONAL_INFO.name}</h3>
-                    <p className="text-[10px] text-[#DDD] flex items-center gap-1 mt-0.5 uppercase tracking-wider">
-                      <GraduationCap className="w-3 h-3 text-[#CC5500]" /> Shaheed Bir Uttam Lt. Anwar Girls College
-                    </p>
-                  </div>
+                {/* Editorial Photo Caption Badge - Placed UNDER the image */}
+                <div className="bg-[#1A1A1A] text-[#F9F7F2] p-3 text-left border border-[#1A1A1A] shadow-sm">
+                  <span className="px-2 py-0.5 text-[9px] font-bold uppercase tracking-widest bg-[#CC5500] text-white inline-block mb-1">
+                    Software Engineering Candidate
+                  </span>
+                  <h3 className="text-base font-serif italic text-white leading-tight">{PERSONAL_INFO.name}</h3>
+                  <p className="text-[11px] text-[#DDD] flex items-center gap-1 mt-1 uppercase tracking-wider">
+                    <GraduationCap className="w-3.5 h-3.5 text-[#CC5500]" /> Daffodil International University
+                  </p>
                 </div>
 
                 {/* Profile Stats Summary */}

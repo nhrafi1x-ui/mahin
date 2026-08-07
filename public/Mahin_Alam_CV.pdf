@@ -1,0 +1,451 @@
+%PDF-1.3
+%�߬�
+3 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/MediaBox [0 0 595.2799999999999727 841.8899999999999864]
+/Contents 4 0 R
+>>
+endobj
+4 0 obj
+<<
+/Length 4632
+>>
+stream
+0.200025 w
+0 G
+BT
+/F10 24 Tf
+27.5999999999999979 TL
+0.102 g
+40. 791.8899999999999864 Td
+(MAHIN ALAM) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0.8 0.333 0. rg
+40. 773.8899999999999864 Td
+(SOFTWARE ENGINEER & AI/ML RESEARCHER) Tj
+ET
+BT
+/F1 9 Tf
+10.3499999999999996 TL
+0.314 g
+40. 759.8899999999999864 Td
+(Daffodil International University � Final Year Student \(Graduating Late 2026\)) Tj
+ET
+BT
+/F1 9 Tf
+10.3499999999999996 TL
+0.314 g
+40. 747.8899999999999864 Td
+(Email: alammahin301@gmail.com | Location: Dhaka, Bangladesh | GitHub: github.com | LinkedIn: linkedin.com) Tj
+ET
+1. w
+0.1 G
+40. 732.8899999999999864 m
+555. 732.8899999999999864 l
+S
+BT
+/F2 11 Tf
+12.6499999999999986 TL
+0.102 g
+40. 712.8899999999999864 Td
+(PROFESSIONAL SUMMARY) Tj
+ET
+BT
+/F1 9 Tf
+10.3499999999999996 TL
+0.196 g
+40. 700.8899999999999864 Td
+(Final year Software Engineering student at Daffodil International University with a passion for building scalable web applications) Tj
+T* (and applying explainable machine learning to solve real-world human behavioral problems. Strong foundation in full-stack) Tj
+T* (engineering, algorithms, and data science.) Tj
+ET
+BT
+/F2 11 Tf
+12.6499999999999986 TL
+0.102 g
+40. 654.8899999999999864 Td
+(ACADEMIC QUALIFICATIONS) Tj
+ET
+BT
+/F2 9.5 Tf
+10.9249999999999989 TL
+0.102 g
+40. 640.8899999999999864 Td
+(B.Sc. in Software Engineering) Tj
+ET
+BT
+/F1 9.5 Tf
+10.9249999999999989 TL
+0.102 g
+435. 640.8899999999999864 Td
+(2022 � 2026 \(Final Year\)) Tj
+ET
+BT
+/F1 9.5 Tf
+10.9249999999999989 TL
+0.314 g
+40. 628.8899999999999864 Td
+(Daffodil International University | Enrolled - Final Semester \(4 Months Remaining\)) Tj
+ET
+BT
+/F2 9.5 Tf
+10.9249999999999989 TL
+0.8 0.333 0. rg
+40. 616.8899999999999864 Td
+(Higher Secondary Certificate \(HSC\): GPA 5.00 / 5.00 \(Golden GPA\)) Tj
+ET
+BT
+/F1 9.5 Tf
+10.9249999999999989 TL
+0.314 g
+40. 604.8899999999999864 Td
+(Secondary School Certificate \(SSC\): GPA 4.89 / 5.00) Tj
+ET
+BT
+/F2 11 Tf
+12.6499999999999986 TL
+0.102 g
+40. 584.8899999999999864 Td
+(UNDERGRADUATE THESIS RESEARCH) Tj
+ET
+BT
+/F2 9.5 Tf
+10.9249999999999989 TL
+0.8 0.333 0. rg
+40. 570.8899999999999864 Td
+(Beyond Detection: Behavioral Phenotyping of Problematic Social Media Use) Tj
+ET
+BT
+/F1 9 Tf
+10.3499999999999996 TL
+0.196 g
+40. 558.8899999999999864 Td
+(Developed an interpretable ML framework achieving 94.2% classification accuracy across 1,200+ survey records. Utilized SHAP) Tj
+T* (and LIME for model explainability to map behavioral risk factors into targeted digital health intervention strategies.) Tj
+ET
+BT
+/F2 11 Tf
+12.6499999999999986 TL
+0.102 g
+40. 524.8899999999999864 Td
+(TECHNICAL COMPETENCIES) Tj
+ET
+BT
+/F2 9 Tf
+10.3499999999999996 TL
+0.102 g
+40. 510.8899999999999864 Td
+(Languages & Frameworks:) Tj
+ET
+BT
+/F1 9 Tf
+10.3499999999999996 TL
+0.102 g
+180. 510.8899999999999864 Td
+(Python, JavaScript, TypeScript, React.js, Node.js, Express.js, Tailwind CSS, HTML5, CSS3) Tj
+ET
+BT
+/F2 9 Tf
+10.3499999999999996 TL
+0.102 g
+40. 496.8899999999999864 Td
+(Machine Learning & AI:) Tj
+ET
+BT
+/F1 9 Tf
+10.3499999999999996 TL
+0.102 g
+180. 496.8899999999999864 Td
+(Scikit-learn, TensorFlow, PyTorch, SHAP, LIME, Pandas, NumPy, OpenCV, Data Visualization) Tj
+ET
+BT
+/F2 9 Tf
+10.3499999999999996 TL
+0.102 g
+40. 482.8899999999999864 Td
+(Databases & Tools:) Tj
+ET
+BT
+/F1 9 Tf
+10.3499999999999996 TL
+0.102 g
+180. 482.8899999999999864 Td
+(PostgreSQL, MySQL, MongoDB, Git, GitHub, Docker, Postman, LaTeX, VS Code) Tj
+ET
+BT
+/F2 11 Tf
+12.6499999999999986 TL
+0.102 g
+40. 462.8899999999999864 Td
+(FEATURED PROJECTS) Tj
+ET
+BT
+/F2 9.5 Tf
+10.9249999999999989 TL
+0.102 g
+40. 448.8899999999999864 Td
+(1. XAI Social Media Phenotype Visualizer \(React, Python, SHAP, FastAPI\)) Tj
+ET
+BT
+/F1 8.5 Tf
+9.7749999999999986 TL
+0.196 g
+50. 436.8899999999999864 Td
+(Interactive dashboard displaying feature attribution waterfalls and individual risk scores.) Tj
+ET
+BT
+/F2 9.5 Tf
+10.9249999999999989 TL
+0.102 g
+40. 422.8899999999999864 Td
+(2. MedIntervene Healthcare Portal \(Node.js, PostgreSQL, Tailwind, React\)) Tj
+ET
+BT
+/F1 8.5 Tf
+9.7749999999999986 TL
+0.196 g
+50. 410.8899999999999864 Td
+(Full-stack clinical management tool mapping ML risk flags directly into medical interventions.) Tj
+ET
+BT
+/F2 9.5 Tf
+10.9249999999999989 TL
+0.102 g
+40. 396.8899999999999864 Td
+(3. MindTrack Sentiment Analyzer \(Python, PyTorch, Hugging Face, D3.js\)) Tj
+ET
+BT
+/F1 8.5 Tf
+9.7749999999999986 TL
+0.196 g
+50. 384.8899999999999864 Td
+(Real-time NLP sentiment & emotion detection pipeline with visual longitudinal analytics.) Tj
+ET
+BT
+/F3 8 Tf
+9.1999999999999993 TL
+0.471 g
+40. 41.8899999999999864 Td
+(Mahin Alam � Official Curriculum Vitae � Daffodil International University) Tj
+ET
+endstream
+endobj
+1 0 obj
+<</Type /Pages
+/Kids [3 0 R ]
+/Count 1
+>>
+endobj
+5 0 obj
+<<
+/Type /Font
+/BaseFont /Helvetica
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+6 0 obj
+<<
+/Type /Font
+/BaseFont /Helvetica-Bold
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+7 0 obj
+<<
+/Type /Font
+/BaseFont /Helvetica-Oblique
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+8 0 obj
+<<
+/Type /Font
+/BaseFont /Helvetica-BoldOblique
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+9 0 obj
+<<
+/Type /Font
+/BaseFont /Courier
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+10 0 obj
+<<
+/Type /Font
+/BaseFont /Courier-Bold
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+11 0 obj
+<<
+/Type /Font
+/BaseFont /Courier-Oblique
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+12 0 obj
+<<
+/Type /Font
+/BaseFont /Courier-BoldOblique
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+13 0 obj
+<<
+/Type /Font
+/BaseFont /Times-Roman
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+14 0 obj
+<<
+/Type /Font
+/BaseFont /Times-Bold
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+15 0 obj
+<<
+/Type /Font
+/BaseFont /Times-Italic
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+16 0 obj
+<<
+/Type /Font
+/BaseFont /Times-BoldItalic
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+17 0 obj
+<<
+/Type /Font
+/BaseFont /ZapfDingbats
+/Subtype /Type1
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+18 0 obj
+<<
+/Type /Font
+/BaseFont /Symbol
+/Subtype /Type1
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+2 0 obj
+<<
+/ProcSet [/PDF /Text /ImageB /ImageC /ImageI]
+/Font <<
+/F1 5 0 R
+/F2 6 0 R
+/F3 7 0 R
+/F4 8 0 R
+/F5 9 0 R
+/F6 10 0 R
+/F7 11 0 R
+/F8 12 0 R
+/F9 13 0 R
+/F10 14 0 R
+/F11 15 0 R
+/F12 16 0 R
+/F13 17 0 R
+/F14 18 0 R
+>>
+/XObject <<
+>>
+>>
+endobj
+19 0 obj
+<<
+/Producer (jsPDF 4.2.1)
+/CreationDate (D:20260807141618-00'00')
+>>
+endobj
+20 0 obj
+<<
+/Type /Catalog
+/Pages 1 0 R
+/OpenAction [3 0 R /FitH null]
+/PageLayout /OneColumn
+>>
+endobj
+xref
+0 21
+0000000000 65535 f 
+0000004836 00000 n 
+0000006653 00000 n 
+0000000015 00000 n 
+0000000152 00000 n 
+0000004893 00000 n 
+0000005018 00000 n 
+0000005148 00000 n 
+0000005281 00000 n 
+0000005418 00000 n 
+0000005541 00000 n 
+0000005670 00000 n 
+0000005802 00000 n 
+0000005938 00000 n 
+0000006066 00000 n 
+0000006193 00000 n 
+0000006322 00000 n 
+0000006455 00000 n 
+0000006557 00000 n 
+0000006901 00000 n 
+0000006987 00000 n 
+trailer
+<<
+/Size 21
+/Root 20 0 R
+/Info 19 0 R
+/ID [ <44D3BA15A1CC1B4ACB0EEB744C3E2085> <44D3BA15A1CC1B4ACB0EEB744C3E2085> ]
+>>
+startxref
+7091
+%%EOF

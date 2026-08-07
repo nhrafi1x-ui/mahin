@@ -77,22 +77,33 @@ KEY PROJECTS:
             </h3>
           </div>
 
-          <div className="flex items-center gap-2">
+          <div className="flex flex-wrap items-center gap-2">
             <button
               onClick={handleCopyText}
               className="px-3 py-1.5 bg-white hover:bg-[#1A1A1A] hover:text-white text-[#1A1A1A] border border-[#1A1A1A] text-xs font-bold uppercase tracking-wider transition-colors cursor-pointer"
               title="Copy ATS text format"
             >
               {copied ? <Check className="w-3.5 h-3.5 text-[#CC5500]" /> : <Copy className="w-3.5 h-3.5 text-[#1A1A1A]" />}
-              <span>{copied ? 'Copied!' : 'Copy ATS Text'}</span>
+              <span className="hidden sm:inline">{copied ? 'Copied!' : 'Copy ATS Text'}</span>
             </button>
+
+            <a
+              href="/Mahin_Alam_CV.pdf"
+              download="Mahin_Alam_CV.pdf"
+              className="px-3.5 py-1.5 bg-[#CC5500] hover:bg-[#A34400] text-white text-xs font-bold uppercase tracking-wider flex items-center gap-1.5 transition-colors cursor-pointer border border-[#1A1A1A] shadow-sm"
+              title="Download PDF File directly"
+            >
+              <Download className="w-3.5 h-3.5" />
+              <span>Download PDF</span>
+            </a>
 
             <button
               onClick={handlePrint}
-              className="px-3.5 py-1.5 bg-[#CC5500] hover:bg-[#A34400] text-white text-xs font-bold uppercase tracking-wider flex items-center gap-1.5 transition-colors cursor-pointer border border-[#1A1A1A]"
+              className="px-3.5 py-1.5 bg-white hover:bg-[#E6E1D6] text-[#1A1A1A] text-xs font-bold uppercase tracking-wider flex items-center gap-1.5 transition-colors cursor-pointer border border-[#1A1A1A]"
+              title="Print CV or Save as PDF"
             >
-              <Printer className="w-3.5 h-3.5" />
-              <span>Print / Download PDF</span>
+              <Printer className="w-3.5 h-3.5 text-[#CC5500]" />
+              <span className="hidden sm:inline">Print</span>
             </button>
 
             <button
@@ -129,7 +140,7 @@ KEY PROJECTS:
                   <MapPin className="w-3.5 h-3.5 text-[#1A1A1A]" /> {PERSONAL_INFO.location}
                 </div>
                 <div className="flex items-center sm:justify-end gap-1.5">
-                  <GraduationCap className="w-3.5 h-3.5 text-[#CC5500]" /> Shaheed Bir Uttam Lt. Anwar Girls College
+                  <GraduationCap className="w-3.5 h-3.5 text-[#CC5500]" /> Daffodil International University
                 </div>
               </div>
             </div>

@@ -51,36 +51,28 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenCvModal, activeSection, se
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
-        {/* Brand logo & status */}
-        <div className="flex items-center gap-3">
+        {/* Brand logo - Only Name */}
+        <div className="flex items-center">
           <button
             onClick={() => scrollToSection('hero')}
-            className="text-left group flex items-center gap-3 focus:outline-none"
+            className="text-left group flex items-center gap-3 focus:outline-none cursor-pointer"
           >
-            <div className="w-9 h-9 border border-[#1A1A1A] bg-[#1A1A1A] text-[#F9F7F2] font-serif italic flex items-center justify-center font-bold text-lg group-hover:bg-[#CC5500] group-hover:border-[#CC5500] transition-colors">
+            <div className="w-10 h-10 border-2 border-[#1A1A1A] bg-[#1A1A1A] text-[#F9F7F2] font-serif italic flex items-center justify-center font-bold text-xl group-hover:bg-[#CC5500] group-hover:border-[#CC5500] transition-colors shrink-0">
               MA
             </div>
-            <div>
-              <div className="font-serif italic text-[#1A1A1A] text-2xl leading-none group-hover:text-[#CC5500] transition-colors flex items-center gap-2">
-                {PERSONAL_INFO.name}
-                <span className="hidden sm:inline-flex items-center px-2 py-0.5 text-[10px] uppercase tracking-wider font-semibold bg-[#E6E1D6] text-[#1A1A1A] border border-[#1A1A1A]">
-                  <Clock className="w-3 h-3 mr-1 text-[#CC5500]" /> 4 Months Left
-                </span>
-              </div>
-              <p className="text-[10px] uppercase tracking-widest text-[#666] font-semibold mt-0.5 flex items-center gap-1">
-                <GraduationCap className="w-3 h-3 inline text-[#1A1A1A]" /> Software Engineering '26
-              </p>
-            </div>
+            <span className="font-serif italic font-bold text-[#1A1A1A] text-2xl tracking-tight group-hover:text-[#CC5500] transition-colors">
+              {PERSONAL_INFO.name}
+            </span>
           </button>
         </div>
 
         {/* Desktop Navigation Links */}
-        <nav className="hidden md:flex items-center gap-1 bg-[#E6E1D6] p-1 border border-[#1A1A1A]">
+        <nav className="hidden md:flex items-center gap-1.5 bg-[#E6E1D6] p-1.5 border border-[#1A1A1A]">
           {navLinks.map((link) => (
             <button
               key={link.id}
               onClick={() => scrollToSection(link.id)}
-              className={`px-4 py-1.5 text-xs uppercase tracking-wider font-semibold transition-all ${
+              className={`px-4 py-2 text-xs uppercase tracking-wider font-bold transition-all cursor-pointer ${
                 activeSection === link.id
                   ? 'bg-[#1A1A1A] text-[#F9F7F2]'
                   : 'text-[#1A1A1A] hover:bg-[#F9F7F2]'
@@ -91,34 +83,36 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenCvModal, activeSection, se
           ))}
         </nav>
 
-        {/* CTA Actions */}
-        <div className="hidden lg:flex items-center gap-3">
-          <button
-            onClick={onOpenCvModal}
-            className="flex items-center gap-2 px-4 py-2 text-xs uppercase tracking-widest font-bold bg-white text-[#1A1A1A] border border-[#1A1A1A] hover:bg-[#E6E1D6] transition-all cursor-pointer"
+        {/* CTA Actions - Perfectly Aligned & Spacious */}
+        <div className="hidden lg:flex items-center gap-4">
+          <a
+            href="/Mahin_Alam_CV.pdf"
+            download="Mahin_Alam_CV.pdf"
+            className="flex items-center gap-2 px-5 py-2.5 text-xs uppercase tracking-widest font-bold bg-white text-[#1A1A1A] border border-[#1A1A1A] hover:bg-[#E6E1D6] transition-all cursor-pointer shadow-sm"
           >
-            <FileText className="w-3.5 h-3.5 text-[#CC5500]" />
+            <FileText className="w-4 h-4 text-[#CC5500]" />
             <span>Download CV</span>
-          </button>
+          </a>
           <button
             onClick={() => scrollToSection('contact')}
-            className="flex items-center gap-2 px-4 py-2 text-xs uppercase tracking-widest font-bold bg-[#CC5500] hover:bg-[#A34400] text-white border border-[#1A1A1A] transition-all cursor-pointer shadow-sm"
+            className="flex items-center gap-2 px-5 py-2.5 text-xs uppercase tracking-widest font-bold bg-[#CC5500] hover:bg-[#A34400] text-white border border-[#1A1A1A] transition-all cursor-pointer shadow-sm"
           >
-            <Briefcase className="w-3.5 h-3.5" />
+            <Briefcase className="w-4 h-4" />
             <span>Hire Mahin</span>
           </button>
         </div>
 
         {/* Mobile menu toggle button */}
         <div className="flex md:hidden items-center gap-2">
-          <button
-            onClick={onOpenCvModal}
+          <a
+            href="/Mahin_Alam_CV.pdf"
+            download="Mahin_Alam_CV.pdf"
             className="p-2 bg-white text-[#1A1A1A] border border-[#1A1A1A] text-xs font-bold flex items-center gap-1"
             title="Download CV"
           >
             <FileText className="w-4 h-4 text-[#CC5500]" />
             <span className="text-[10px] uppercase font-bold">CV</span>
-          </button>
+          </a>
 
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}

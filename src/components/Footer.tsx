@@ -62,7 +62,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenCvModal }) => {
             © {new Date().getFullYear()} Mahin Alam. Editorial Portfolio.
           </p>
           <p className="flex items-center gap-1">
-            Shaheed Bir Uttam Lt. Anwar Girls College Alumna • Built for Recruiters & Research Collaborators
+            Daffodil International University • Built for Recruiters & Research Collaborators
           </p>
         </div>
       </div>

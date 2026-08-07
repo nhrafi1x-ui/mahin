@@ -3,15 +3,15 @@ import { EducationItem, ProjectCaseStudy, SkillCategory, ShapFeature } from '../
 export const PERSONAL_INFO = {
   name: "Mahin Alam",
   title: "Software Engineer & AI/ML Researcher",
-  subTitle: "Final Year Software Engineering Student — 4 Months to Graduation",
+  subTitle: "Final Year Software Engineering Student — Daffodil International University",
   email: "alammahin301@gmail.com",
   phone: "+880 1700-000000",
   location: "Dhaka, Bangladesh",
-  schoolCollege: "Shaheed Bir Uttam Lt. Anwar Girls College",
+  schoolCollege: "Daffodil International University",
   graduationTimeline: "Last 4 Months Remaining (Graduating Late 2026)",
   github: "https://github.com",
   linkedin: "https://linkedin.com",
-  summary: "Final year Software Engineering student with a passion for building scalable web applications and applying explainable machine learning to solve real-world human behavioral problems. Strong foundation in full-stack engineering, algorithms, and data science.",
+  summary: "Final year Software Engineering student at Daffodil International University with a passion for building scalable web applications and applying explainable machine learning to solve real-world human behavioral problems. Strong foundation in full-stack engineering, algorithms, and data science.",
   sscResult: "4.89 / 5.00",
   hscResult: "5.00 / 5.00 (Golden GPA)",
   thesisTitle: "Beyond Detection: Behavioral Phenotyping of Problematic Social Media Use Among Bangladeshi Students Using Explainable Machine Learning and Intervention Mapping"
@@ -20,11 +20,11 @@ export const PERSONAL_INFO = {
 export const EDUCATION_DATA: EducationItem[] = [
   {
     id: "bsc-se",
-    degree: "B.Sc. in Computer Science & Software Engineering",
-    institution: "Shaheed Bir Uttam Lt. Anwar Girls College Campus / University Division",
+    degree: "B.Sc. in Software Engineering",
+    institution: "Daffodil International University",
     year: "2022 — 2026 (Final Year, Last 4 Months)",
     result: "Enrolled - Final Semester (4 Months Remaining)",
-    description: "Specializing in Full-Stack Software Development, Machine Learning, Data Structures, Algorithms, and Explainable AI.",
+    description: "Specializing in Full-Stack Software Engineering, Machine Learning, Data Structures, Algorithms, and Explainable AI at Daffodil International University.",
     highlights: [
       "Thesis: Explainable Machine Learning & Behavioral Phenotyping",
       "Completed 12+ Core Engineering Projects",
