@@ -6,172 +6,285 @@ const doc = new jsPDF({
   format: 'a4'
 });
 
-// A4 dimensions in pt: 595.28 x 841.89
-const margin = 40;
-let y = 50;
+// A4 dimensions: 595.28 x 841.89 pt
+const pageWidth = 595.28;
+const margin = 36;
+let y = 30;
 
-// Header
-doc.setFont('times', 'bold');
-doc.setFontSize(24);
-doc.setTextColor(26, 26, 26);
-doc.text('MAHIN ALAM', margin, y);
+// Colors - Europass Brand Palette
+const europassBlue = [14, 71, 101];     // #0E4765 - Main Europass Deep Blue
+const europassAccent = [0, 102, 161];    // #0066A1 - Lighter Blue accent
+const europassGray = [240, 244, 248];    // #F0F4F8 - Background tint
+const textDark = [26, 32, 44];          // #1A202C - Dark body text
+const textMuted = [100, 116, 139];       // #64748B - Secondary text
 
-y += 18;
+// 1. EUROPASS HEADER BANNER
+doc.setFillColor(...europassBlue);
+doc.rect(0, 0, pageWidth, 72, 'F');
+
+// Top-left "europass" badge
+doc.setTextColor(255, 255, 255);
 doc.setFont('helvetica', 'bold');
+doc.setFontSize(22);
+doc.text('europass', margin, 38);
+
+// Yellow accent dot for Europass visual identity
+doc.setFillColor(255, 204, 0);
+doc.circle(margin + 98, 32, 3.5, 'F');
+
+// Top-right "CURRICULUM VITAE" label
+doc.setFont('helvetica', 'normal');
 doc.setFontSize(10);
-doc.setTextColor(204, 85, 0); // #CC5500
-doc.text('SOFTWARE ENGINEER & AI/ML RESEARCHER', margin, y);
+doc.text('CURRICULUM VITAE', pageWidth - margin - 110, 38);
 
-y += 14;
-doc.setFont('helvetica', 'normal');
-doc.setFontSize(9);
-doc.setTextColor(80, 80, 80);
-doc.text('Daffodil International University • Final Year Student (Graduating Late 2026)', margin, y);
+y = 88;
 
-y += 12;
-doc.text('Email: alammahin301@gmail.com | Location: Dhaka, Bangladesh | GitHub: github.com | LinkedIn: linkedin.com', margin, y);
-
-y += 15;
+// 2. PERSONAL INFORMATION
+doc.setFillColor(...europassGray);
+doc.rect(margin, y, pageWidth - (margin * 2), 70, 'F');
+doc.setDrawColor(...europassBlue);
 doc.setLineWidth(1);
-doc.setDrawColor(26, 26, 26);
-doc.line(margin, y, 595 - margin, y);
+doc.line(margin, y, margin, y + 70); // Left border stripe
 
-// Professional Summary
-y += 20;
+let py = y + 16;
 doc.setFont('helvetica', 'bold');
-doc.setFontSize(11);
-doc.setTextColor(26, 26, 26);
-doc.text('PROFESSIONAL SUMMARY', margin, y);
+doc.setFontSize(16);
+doc.setTextColor(...europassBlue);
+doc.text('MAHIN ALAM', margin + 12, py);
 
-y += 12;
-doc.setFont('helvetica', 'normal');
-doc.setFontSize(9);
-doc.setTextColor(50, 50, 50);
-const summary = "Final year Software Engineering student at Daffodil International University with a passion for building scalable web applications and applying explainable machine learning to solve real-world human behavioral problems. Strong foundation in full-stack engineering, algorithms, and data science.";
-const splitSummary = doc.splitTextToSize(summary, 515);
-doc.text(splitSummary, margin, y);
-y += splitSummary.length * 12 + 10;
-
-// Education
-doc.setFont('helvetica', 'bold');
-doc.setFontSize(11);
-doc.setTextColor(26, 26, 26);
-doc.text('ACADEMIC QUALIFICATIONS', margin, y);
-
-y += 14;
+py += 14;
 doc.setFont('helvetica', 'bold');
 doc.setFontSize(9.5);
-doc.setTextColor(26, 26, 26);
-doc.text('B.Sc. in Software Engineering', margin, y);
+doc.setTextColor(...textDark);
+doc.text('JOB APPLIED FOR / POSITION:', margin + 12, py);
 doc.setFont('helvetica', 'normal');
-doc.text('2022 — 2026 (Final Year)', 595 - margin - 120, y);
+doc.setTextColor(...europassAccent);
+doc.text(' Software Engineer & AI/ML Researcher', margin + 170, py);
 
-y += 12;
-doc.setTextColor(80, 80, 80);
-doc.text('Daffodil International University | Enrolled - Final Semester (4 Months Remaining)', margin, y);
-
-y += 12;
-doc.setFont('helvetica', 'bold');
-doc.setTextColor(204, 85, 0);
-doc.text('Higher Secondary Certificate (HSC): GPA 5.00 / 5.00 (Golden GPA)', margin, y);
-
-y += 12;
-doc.setTextColor(80, 80, 80);
+py += 13;
 doc.setFont('helvetica', 'normal');
-doc.text('Secondary School Certificate (SSC): GPA 4.89 / 5.00', margin, y);
+doc.setFontSize(8.5);
+doc.setTextColor(...textDark);
+doc.text('Email: alammahin301@gmail.com  |  Location: Dhaka, Bangladesh', margin + 12, py);
 
-// Research Thesis
-y += 20;
-doc.setFont('helvetica', 'bold');
-doc.setFontSize(11);
-doc.setTextColor(26, 26, 26);
-doc.text('UNDERGRADUATE THESIS RESEARCH', margin, y);
-
-y += 14;
-doc.setFont('helvetica', 'bold');
-doc.setFontSize(9.5);
-doc.setTextColor(204, 85, 0);
-doc.text('Beyond Detection: Behavioral Phenotyping of Problematic Social Media Use', margin, y);
-
-y += 12;
+py += 11;
 doc.setFont('helvetica', 'normal');
-doc.setFontSize(9);
-doc.setTextColor(50, 50, 50);
-const thesisObj = "Developed an interpretable ML framework achieving 94.2% classification accuracy across 1,200+ survey records. Utilized SHAP and LIME for model explainability to map behavioral risk factors into targeted digital health intervention strategies.";
-const splitThesis = doc.splitTextToSize(thesisObj, 515);
-doc.text(splitThesis, margin, y);
-y += splitThesis.length * 12 + 10;
+doc.text('GitHub: github.com/mahin221  |  LinkedIn: linkedin.com/in/mahin-alam-153653428  |  Nationality: Bangladeshi', margin + 12, py);
 
-// Technical Skills
-doc.setFont('helvetica', 'bold');
-doc.setFontSize(11);
-doc.setTextColor(26, 26, 26);
-doc.text('TECHNICAL COMPETENCIES', margin, y);
+y += 82;
 
-y += 14;
+// Helper section header drawer
+function drawEuropassHeader(title, iconSymbol = '') {
+  doc.setFillColor(...europassBlue);
+  doc.rect(margin, y, pageWidth - (margin * 2), 18, 'F');
+  
+  doc.setTextColor(255, 255, 255);
+  doc.setFont('helvetica', 'bold');
+  doc.setFontSize(9.5);
+  doc.text(title.toUpperCase(), margin + 8, y + 12);
+  y += 24;
+}
+
+// 3. WORK EXPERIENCE & RESEARCH
+drawEuropassHeader('WORK EXPERIENCE & RESEARCH ACTIVITIES');
+
 doc.setFont('helvetica', 'bold');
 doc.setFontSize(9);
-doc.text('Languages & Frameworks:', margin, y);
-doc.setFont('helvetica', 'normal');
-doc.text('Python, JavaScript, TypeScript, React.js, Node.js, Express.js, Tailwind CSS, HTML5, CSS3', margin + 140, y);
+doc.setTextColor(...textDark);
+doc.text('2025 – Present', margin, y);
 
-y += 14;
 doc.setFont('helvetica', 'bold');
-doc.text('Machine Learning & AI:', margin, y);
-doc.setFont('helvetica', 'normal');
-doc.text('Scikit-learn, TensorFlow, PyTorch, SHAP, LIME, Pandas, NumPy, OpenCV, Data Visualization', margin + 140, y);
+doc.setTextColor(...europassBlue);
+doc.text('Undergraduate Thesis Researcher & AI Developer', margin + 100, y);
 
-y += 14;
-doc.setFont('helvetica', 'bold');
-doc.text('Databases & Tools:', margin, y);
-doc.setFont('helvetica', 'normal');
-doc.text('PostgreSQL, MySQL, MongoDB, Git, GitHub, Docker, Postman, LaTeX, VS Code', margin + 140, y);
+y += 11;
+doc.setFont('helvetica', 'italic');
+doc.setFontSize(8.5);
+doc.setTextColor(...textMuted);
+doc.text('Daffodil International University — Department of Software Engineering', margin + 100, y);
 
-// Projects
-y += 20;
-doc.setFont('helvetica', 'bold');
-doc.setFontSize(11);
-doc.setTextColor(26, 26, 26);
-doc.text('FEATURED PROJECTS', margin, y);
-
-y += 14;
-doc.setFont('helvetica', 'bold');
-doc.setFontSize(9.5);
-doc.text('1. XAI Social Media Phenotype Visualizer (React, Python, SHAP, FastAPI)', margin, y);
 y += 12;
 doc.setFont('helvetica', 'normal');
 doc.setFontSize(8.5);
-doc.setTextColor(50, 50, 50);
-doc.text('Interactive dashboard displaying feature attribution waterfalls and individual risk scores.', margin + 10, y);
+doc.setTextColor(...textDark);
+const thesisDesc = "• Conducted research on 'Beyond Detection: Behavioral Phenotyping of Problematic Social Media Use Using Explainable Machine Learning (XAI)'.\n• Built high-accuracy predictive models (94.2% ROC-AUC) using XGBoost, Random Forest, SHAP, and LIME on 1,200+ student records.\n• Developed interactive web dashboards to map behavioral attributions into personalized digital health interventions.";
+const splitThesis = doc.splitTextToSize(thesisDesc, 415);
+doc.text(splitThesis, margin + 100, y);
+y += (splitThesis.length * 11) + 12;
+
+// 4. EDUCATION AND TRAINING
+drawEuropassHeader('EDUCATION AND TRAINING');
+
+// B.Sc.
+doc.setFont('helvetica', 'bold');
+doc.setFontSize(9);
+doc.setTextColor(...textDark);
+doc.text('2022 – Present', margin, y);
+
+doc.setFont('helvetica', 'bold');
+doc.setTextColor(...europassBlue);
+doc.text('Bachelor of Science (B.Sc.) in Software Engineering', margin + 100, y);
+doc.setFont('helvetica', 'normal');
+doc.setFontSize(8);
+doc.setTextColor(...europassAccent);
+doc.text('[EQF Level 6 / Final Year]', margin + 355, y);
+
+y += 11;
+doc.setFont('helvetica', 'italic');
+doc.setFontSize(8.5);
+doc.setTextColor(...textMuted);
+doc.text('Daffodil International University, Dhaka, Bangladesh', margin + 100, y);
+
+y += 11;
+doc.setFont('helvetica', 'normal');
+doc.setFontSize(8.5);
+doc.setTextColor(...textDark);
+doc.text('• Focus: Software Architecture, Explainable AI, Web Engineering, Data Structures & Algorithms.', margin + 100, y);
+y += 10;
+doc.text('• Status: Enrolled in Final Semester (Graduating in 4 Months - Late 2026).', margin + 100, y);
+
+y += 16;
+// HSC
+doc.setFont('helvetica', 'bold');
+doc.setFontSize(9);
+doc.setTextColor(...textDark);
+doc.text('2019 – 2021', margin, y);
+
+doc.setFont('helvetica', 'bold');
+doc.setTextColor(...europassBlue);
+doc.text('Higher Secondary Certificate (HSC) — Science', margin + 100, y);
+
+y += 11;
+doc.setFont('helvetica', 'italic');
+doc.setFontSize(8.5);
+doc.setTextColor(...textMuted);
+doc.text('Shaheed Bir Uttam Lt. Anwar Girls College, Dhaka', margin + 100, y);
+
+y += 11;
+doc.setFont('helvetica', 'bold');
+doc.setFontSize(8.5);
+doc.setTextColor(180, 70, 0);
+doc.text('• Result: GPA 5.00 / 5.00 (Golden GPA)', margin + 100, y);
+
+y += 16;
+// SSC
+doc.setFont('helvetica', 'bold');
+doc.setFontSize(9);
+doc.setTextColor(...textDark);
+doc.text('2017 – 2019', margin, y);
+
+doc.setFont('helvetica', 'bold');
+doc.setTextColor(...europassBlue);
+doc.text('Secondary School Certificate (SSC) — Science', margin + 100, y);
+
+y += 11;
+doc.setFont('helvetica', 'italic');
+doc.setFontSize(8.5);
+doc.setTextColor(...textMuted);
+doc.text('Shaheed Bir Uttam Lt. Anwar Girls College, Dhaka', margin + 100, y);
+
+y += 11;
+doc.setFont('helvetica', 'normal');
+doc.setFontSize(8.5);
+doc.setTextColor(...textDark);
+doc.text('• Result: GPA 4.89 / 5.00', margin + 100, y);
+
+y += 20;
+
+// 5. DIGITAL SKILLS & COMPETENCIES
+drawEuropassHeader('DIGITAL SKILLS');
+
+doc.setFont('helvetica', 'bold');
+doc.setFontSize(8.5);
+doc.setTextColor(...textDark);
+
+doc.text('Programming Languages:', margin, y);
+doc.setFont('helvetica', 'normal');
+doc.text('Python, TypeScript, JavaScript, C++, SQL (PostgreSQL/MySQL), HTML5, CSS3', margin + 130, y);
+
+y += 13;
+doc.setFont('helvetica', 'bold');
+doc.text('AI & Data Science:', margin, y);
+doc.setFont('helvetica', 'normal');
+doc.text('Scikit-learn, XGBoost, SHAP, LIME, PyTorch, Pandas, NumPy, OpenCV, Gemini API', margin + 130, y);
+
+y += 13;
+doc.setFont('helvetica', 'bold');
+doc.text('Web & Frameworks:', margin, y);
+doc.setFont('helvetica', 'normal');
+doc.text('React.js, Node.js, Express.js, Tailwind CSS, Vite, RESTful APIs, Redux', margin + 130, y);
+
+y += 13;
+doc.setFont('helvetica', 'bold');
+doc.text('Tools & Software:', margin, y);
+doc.setFont('helvetica', 'normal');
+doc.text('Git, GitHub, Docker, PostgreSQL, Firebase, Postman, VS Code, Linux', margin + 130, y);
+
+y += 20;
+
+// 6. LANGUAGE SKILLS
+drawEuropassHeader('LANGUAGE SKILLS');
+
+doc.setFont('helvetica', 'bold');
+doc.setFontSize(8.5);
+doc.setTextColor(...textDark);
+
+doc.text('Mother Tongue(s):', margin, y);
+doc.setFont('helvetica', 'normal');
+doc.text('Bengali', margin + 130, y);
 
 y += 14;
 doc.setFont('helvetica', 'bold');
-doc.setFontSize(9.5);
-doc.setTextColor(26, 26, 26);
-doc.text('2. MedIntervene Healthcare Portal (Node.js, PostgreSQL, Tailwind, React)', margin, y);
-y += 12;
-doc.setFont('helvetica', 'normal');
-doc.setFontSize(8.5);
-doc.setTextColor(50, 50, 50);
-doc.text('Full-stack clinical management tool mapping ML risk flags directly into medical interventions.', margin + 10, y);
+doc.text('Other Language(s):', margin, y);
 
-y += 14;
-doc.setFont('helvetica', 'bold');
-doc.setFontSize(9.5);
-doc.setTextColor(26, 26, 26);
-doc.text('3. MindTrack Sentiment Analyzer (Python, PyTorch, Hugging Face, D3.js)', margin, y);
+// CEFR Table Header
 y += 12;
-doc.setFont('helvetica', 'normal');
+doc.setFillColor(...europassGray);
+doc.rect(margin + 130, y, 320, 16, 'F');
+
+doc.setFont('helvetica', 'bold');
+doc.setFontSize(8);
+doc.setTextColor(...europassBlue);
+doc.text('English', margin + 135, y + 11);
+doc.text('Listening: C1', margin + 200, y + 11);
+doc.text('Reading: C2', margin + 270, y + 11);
+doc.text('Writing: C1', margin + 340, y + 11);
+doc.text('Speaking: C1', margin + 400, y + 11);
+
+y += 24;
+
+// 7. KEY PROJECTS
+drawEuropassHeader('PROJECTS & DEVELOPMENT');
+
+doc.setFont('helvetica', 'bold');
 doc.setFontSize(8.5);
-doc.setTextColor(50, 50, 50);
-doc.text('Real-time NLP sentiment & emotion detection pipeline with visual longitudinal analytics.', margin + 10, y);
+doc.setTextColor(...europassBlue);
+doc.text('MediSync Healthcare Portal', margin, y);
+doc.setFont('helvetica', 'normal');
+doc.setTextColor(...textDark);
+doc.text('— Full-Stack appointment booking, electronic prescriptions, and medical records.', margin + 140, y);
+
+y += 12;
+doc.setFont('helvetica', 'bold');
+doc.setTextColor(...europassBlue);
+doc.text('EduPulse Essay Analyzer', margin, y);
+doc.setFont('helvetica', 'normal');
+doc.setTextColor(...textDark);
+doc.text('— NLP-driven automated rubric evaluator & writing feedback platform using AI.', margin + 140, y);
+
+y += 12;
+doc.setFont('helvetica', 'bold');
+doc.setTextColor(...europassBlue);
+doc.text('DevFlow Snippet Hub', margin, y);
+doc.setFont('helvetica', 'normal');
+doc.setTextColor(...textDark);
+doc.text('— Developer productivity suite with Kanban board & code snippet vault.', margin + 140, y);
 
 // Footer
-y = 800;
 doc.setFont('helvetica', 'italic');
-doc.setFontSize(8);
-doc.setTextColor(120, 120, 120);
-doc.text('Mahin Alam • Official Curriculum Vitae • Daffodil International University', margin, y);
+doc.setFontSize(7.5);
+doc.setTextColor(...textMuted);
+doc.text('Page 1/1 — Official Europass Curriculum Vitae — Mahin Alam', margin, 822);
 
 if (!fs.existsSync('public')) {
   fs.mkdirSync('public');
@@ -179,4 +292,4 @@ if (!fs.existsSync('public')) {
 
 const pdfBuffer = Buffer.from(doc.output('arraybuffer'));
 fs.writeFileSync('public/Mahin_Alam_CV.pdf', pdfBuffer);
-console.log('PDF successfully written to public/Mahin_Alam_CV.pdf');
+console.log('Europass PDF successfully created at public/Mahin_Alam_CV.pdf');

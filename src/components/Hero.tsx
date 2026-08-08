@@ -3,6 +3,7 @@ import { Download, Mail, Sparkles, Award, GraduationCap, Clock, FileText, Extern
 import { PERSONAL_INFO } from '../data/portfolioData';
 import profilePic from '../assets/images/regenerated_image_1786112837941.png';
 import { MAHIN_PROFILE_IMAGE } from '../assets/profileImage';
+import { downloadEuropassPDF } from '../utils/generateEuropassPDF';
 
 interface HeroProps {
   onOpenCvModal: () => void;
@@ -108,14 +109,13 @@ export const Hero: React.FC<HeroProps> = ({ onOpenCvModal, onExploreProjects, on
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </button>
 
-              <a
-                href="/Mahin_Alam_CV.pdf"
-                download="Mahin_Alam_CV.pdf"
+              <button
+                onClick={downloadEuropassPDF}
                 className="px-6 py-3.5 bg-white hover:bg-[#E6E1D6] text-[#1A1A1A] border border-[#1A1A1A] font-bold text-xs uppercase tracking-widest transition-all flex items-center justify-center gap-2 cursor-pointer shadow-sm"
               >
                 <Download className="w-4 h-4 text-[#CC5500]" />
                 <span>Download CV (PDF)</span>
-              </a>
+              </button>
 
               <button
                 onClick={onContactClick}

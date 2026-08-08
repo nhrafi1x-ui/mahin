@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { GraduationCap, FileText, Mail, Menu, X, Clock, Briefcase, Award } from 'lucide-react';
 import { PERSONAL_INFO } from '../data/portfolioData';
+import { downloadEuropassPDF } from '../utils/generateEuropassPDF';
 
 interface NavbarProps {
   onOpenCvModal: () => void;
@@ -85,14 +86,13 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenCvModal, activeSection, se
 
         {/* CTA Actions - Perfectly Aligned & Spacious */}
         <div className="hidden lg:flex items-center gap-4">
-          <a
-            href="/Mahin_Alam_CV.pdf"
-            download="Mahin_Alam_CV.pdf"
+          <button
+            onClick={downloadEuropassPDF}
             className="flex items-center gap-2 px-5 py-2.5 text-xs uppercase tracking-widest font-bold bg-white text-[#1A1A1A] border border-[#1A1A1A] hover:bg-[#E6E1D6] transition-all cursor-pointer shadow-sm"
           >
             <FileText className="w-4 h-4 text-[#CC5500]" />
             <span>Download CV</span>
-          </a>
+          </button>
           <button
             onClick={() => scrollToSection('contact')}
             className="flex items-center gap-2 px-5 py-2.5 text-xs uppercase tracking-widest font-bold bg-[#CC5500] hover:bg-[#A34400] text-white border border-[#1A1A1A] transition-all cursor-pointer shadow-sm"
@@ -104,15 +104,14 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenCvModal, activeSection, se
 
         {/* Mobile menu toggle button */}
         <div className="flex md:hidden items-center gap-2">
-          <a
-            href="/Mahin_Alam_CV.pdf"
-            download="Mahin_Alam_CV.pdf"
-            className="p-2 bg-white text-[#1A1A1A] border border-[#1A1A1A] text-xs font-bold flex items-center gap-1"
+          <button
+            onClick={downloadEuropassPDF}
+            className="p-2 bg-white text-[#1A1A1A] border border-[#1A1A1A] text-xs font-bold flex items-center gap-1 cursor-pointer"
             title="Download CV"
           >
             <FileText className="w-4 h-4 text-[#CC5500]" />
             <span className="text-[10px] uppercase font-bold">CV</span>
-          </a>
+          </button>
 
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
